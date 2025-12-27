@@ -1,0 +1,268 @@
+/* MapComponent.css */
+
+.map-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.heading-group {
+  flex: 1;
+}
+
+.heading {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subheading {
+  margin: 5px 0 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.map-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Layer Toggles */
+.layer-toggles {
+  display: flex;
+  background: var(--card-bg);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.control-btn {
+  background: transparent;
+  color: var(--text-main);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-btn.active {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+}
+
+.control-btn:hover:not(.active) {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Cyclone Toggle Specific */
+.cyclone-toggle-btn {
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid #ff4757;
+  color: #ff4757;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.cyclone-toggle-btn.active-cyclone {
+  background: #ff4757;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Map Search Form */
+.map-search-form {
+  max-width: 250px;
+}
+
+.map-search-input-wrapper {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-search-input {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  color: var(--text-main);
+  outline: none;
+  font-size: 0.85rem;
+  width: 140px;
+}
+
+.map-search-btn {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Map Display */
+.map-outer-wrapper {
+  position: relative;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.map-legend,
+.cyclone-legend {
+  position: absolute;
+  background: var(--bg-secondary);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.map-legend {
+  top: 20px;
+  right: 20px;
+  border-color: var(--accent-color);
+}
+
+.cyclone-legend {
+  bottom: 20px;
+  left: 20px;
+  border-color: #ff4757;
+}
+
+.pulse-red {
+  width: 10px;
+  height: 10px;
+  background: #ff4757;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
+  }
+}
+
+/* Cyclone Marker Styling */
+.cyclone-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+
+.cyclone-svg-animation {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cyclone-popup {
+  min-width: 180px;
+  font-family: inherit;
+}
+
+/* Custom Marker Styling */
+.custom-icon {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .map-search-form,
+  .map-search-input {
+    width: 100%;
+  }
+
+  .map-outer-wrapper {
+    height: 500px;
+  }
+}
