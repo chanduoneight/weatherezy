@@ -1,0 +1,52 @@
+/* Search.css */
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* Spacing between input and button */
+}
+
+input[type="text"] {
+  margin: 0;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-main);
+  border-radius: 5px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  /* width: 20rem; */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--border-color);
+  /* Keep the same border color on focus */
+}
+
+.btn-primary {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}

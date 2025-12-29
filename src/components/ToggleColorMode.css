@@ -1,0 +1,44 @@
+/* Light Mode (Default) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Dark Mode Navbar */
+  body.dark-mode .navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  /* Button */
+  .toggle-button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Button in Dark Mode */
+  body.dark-mode .toggle-button {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
