@@ -11,7 +11,10 @@ import axios from "axios";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import AboutModal from "./components/AboutModal";
+<<<<<<< HEAD
 import Snowfall from "./components/Snowfall";
+=======
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
 
 const ErrorMessage = ({ message }) => (
   <div className="error-message" style={{ color: "red", padding: "1rem" }}>
@@ -123,7 +126,10 @@ function App() {
   return (
     <Router>
       <div className="main">
+<<<<<<< HEAD
         <Snowfall />
+=======
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
         <Navbar onAboutClick={toggleAbout} />
         <Routes>
           <Route

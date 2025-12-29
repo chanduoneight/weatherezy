@@ -7,25 +7,38 @@
   background-color: var(--bg-primary);
   color: var(--text-main);
   transition: background-color 0.3s ease, color 0.3s ease;
+<<<<<<< HEAD
   min-height: 80vh;
   /* Ensure full height for vertical centering */
+=======
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
 }
 
 .contact-heading {
   text-align: center;
   font-size: 2.5em;
+<<<<<<< HEAD
   margin-bottom: 2rem;
+=======
+  margin-bottom: 1.5rem;
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
   color: var(--text-main);
 }
 
 .container {
+<<<<<<< HEAD
   width: 100%;
   max-width: 900px;
   /* Limit width specifically */
+=======
+  /* max-width: auto; */
+  width: 100%;
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
   background: var(--card-bg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   border: 1px solid var(--border-color);
+<<<<<<< HEAD
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -36,6 +49,14 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
   margin: 0 auto;
   /* Center the container itself */
+=======
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+>>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
 }
 
 .section {
