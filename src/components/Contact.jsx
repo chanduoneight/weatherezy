@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import "./Contact.css";
-=======
-import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import "./Contact.css";
-import Untitled from "./Untitled.png";
->>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
@@ -25,28 +19,6 @@ const Contact = () => {
       <div className="contact-page">
         <div className="container">
           {/* Contact Information */}
-<<<<<<< HEAD
-=======
-          <div className="section">
-            <div>
-              <h4>K</h4>
-              <p>Scan The QR</p>
-              <img
-                src={Untitled}
-                alt="QR code to my other website"
-                className="qr-code"
-              />
-              <h4 className="contact-info-heading"></h4>
-              <p>
-                <FaMapMarkerAlt className="contact-icon" />
-              </p>
-              <p>
-                <FaEnvelope className="contact-icon" />{" "}
-
-              </p>
-            </div>
-          </div>
->>>>>>> 71d5f889e4c21953db6ebf37c58686923c92b05b
           {/* Contact Form */}
           <div className="form-section">
             <h4 className="contact-info-heading">Send Us a Message</h4>
@@ -94,8 +66,8 @@ const Contact = () => {
               </div>
             )}
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     </>
   );
 };
