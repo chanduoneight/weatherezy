@@ -43,5 +43,3 @@ Add your API key in config.js or the appropriate file in the project
 Contributing
 Contributions are welcome! Fork the repository and create a pull request with your improvements
 
-License
-This project is licensed under the MIT License
