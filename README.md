@@ -41,5 +41,5 @@ Get an API key from OpenWeatherMap
 Add your API key in config.js or the appropriate file in the project
 
 Contributing
-Contributions are welcome! Fork the repository and create a pull request with your improvements
+Contributions are welcome! Fork the repository and create a pull request with your improvements.
 
