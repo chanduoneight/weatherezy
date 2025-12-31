@@ -16,7 +16,7 @@ const AboutModal = ({ isOpen, onClose }) => {
                 </div>
                 <div className="modal-body">
                     <p className="about-intro">
-                        Weatherzy is a weather data platform built to demonstrate advanced data fetching and visualization using the OpenWeather ecosystem.
+                        A weather app provides real-time weather information for specific locations. Users can view temperature, humidity, wind speed, and forecasts for the upcoming days.
                     </p>
 
                     <div className="about-features">

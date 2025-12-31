@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../components/Search.css";
+import "./Search.css";
 
 function SearchComponent({ onSearch }) {
   const [inputValue, setInputValue] = useState("");
@@ -22,17 +22,20 @@ function SearchComponent({ onSearch }) {
   };
 
   return (
-    <div className="container">
+    <div className="search-container">
       <form className="form" onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}  // Update input value
-          placeholder="Enter city name"
-        />
-        <button className="btn btn-primary" type="submit">
-          Search
-        </button>
+        <div className="search-input-wrapper">
+          <input
+            className="search-input"
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Enter city name"
+          />
+          <button className="search-btn" type="submit">
+            Search
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -7,7 +7,7 @@ const Footer = ({ onAboutClick }) => {
     <footer className="footer">
       <div className="footer-bottom mt-4 pt-4 text-center">
         <p className="footer-text" >
-          &copy; {currentYear} Galeeb BHAAi. All rights reserved.
+          &copy; {currentYear} FSAD TEAM-9-S-33. All rights reserved.
         </p>
 
       </div>

@@ -44,58 +44,7 @@
   flex-wrap: wrap;
 }
 
-/* Layer Toggles */
-.layer-toggles {
-  display: flex;
-  background: var(--card-bg);
-  padding: 4px;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-}
 
-.control-btn {
-  background: transparent;
-  color: var(--text-main);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.control-btn.active {
-  background: var(--accent-color);
-  color: var(--bg-primary);
-  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
-}
-
-.control-btn:hover:not(.active) {
-  background: rgba(56, 189, 248, 0.1);
-}
-
-/* Cyclone Toggle Specific */
-.cyclone-toggle-btn {
-  background: rgba(255, 71, 87, 0.1);
-  border: 1px solid #ff4757;
-  color: #ff4757;
-  padding: 8px 16px;
-  font-weight: bold;
-}
-
-.cyclone-toggle-btn.active-cyclone {
-  background: #ff4757;
-  color: white;
-  box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
-}
-
-.btn-icon {
-  font-size: 1.1rem;
-}
 
 /* Map Search Form */
 .map-search-form {
@@ -146,87 +95,7 @@
   width: 100%;
 }
 
-.map-legend,
-.cyclone-legend {
-  position: absolute;
-  background: var(--bg-secondary);
-  color: var(--text-main);
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--border-color);
-}
 
-.map-legend {
-  top: 20px;
-  right: 20px;
-  border-color: var(--accent-color);
-}
-
-.cyclone-legend {
-  bottom: 20px;
-  left: 20px;
-  border-color: #ff4757;
-}
-
-.pulse-red {
-  width: 10px;
-  height: 10px;
-  background: #ff4757;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
-  animation: pulse-red 2s infinite;
-}
-
-@keyframes pulse-red {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
-  }
-}
-
-/* Cyclone Marker Styling */
-.cyclone-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
-}
-
-.cyclone-svg-animation {
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.cyclone-popup {
-  min-width: 180px;
-  font-family: inherit;
-}
 
 /* Custom Marker Styling */
 .custom-icon {
