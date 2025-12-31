@@ -28,8 +28,14 @@ function App() {
   const [population, setPopulation] = useState(null);
   const [units, setUnits] = useState("metric"); // Toggle between metric and imperial
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY; // Fetch API key
-  console.log("API Key from environment:", apiKey);
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
+  useEffect(() => {
+    if (!apiKey) {
+      console.error("VITE_WEATHER_API_KEY is missing! Please set it in your environment variables.");
+      setError("Weather API Key is missing. If you are on Netlify, please add VITE_WEATHER_API_KEY to your site settings.");
+    }
+  }, [apiKey]);
 
   const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
 
