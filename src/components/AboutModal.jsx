@@ -12,7 +12,7 @@ const AboutModal = ({ isOpen, onClose }) => {
                     <FaTimes />
                 </button>
                 <div className="modal-header">
-                    <h2 className="modal-title">About Weatherzy</h2>
+                    <h2 className="modal-title">About Weatherezy</h2>
                 </div>
                 <div className="modal-body">
                     <p className="about-intro">

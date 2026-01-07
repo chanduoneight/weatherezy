@@ -29,7 +29,7 @@ const Navbar = ({ onAboutClick }) => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="flex">
             <img src={logo} alt="Weather Logo" />
-            <h2 className="logo-text">Weatherzy</h2>
+            <h2 className="logo-text">Weatherezy</h2>
           </div>
         </Link>
       </div>

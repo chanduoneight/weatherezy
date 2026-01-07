@@ -20,7 +20,7 @@ const Navbar = ({ toggleTheme }) => {
       <div className="navbar-logo">
         <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
           <img src={logo} alt="Weather Logo" className="logo-img" />
-          <h2 className="logo-text">Weatherzy</h2>
+          <h2 className="logo-text">Weatherezy</h2>
         </Link>
       </div>
       <IconButton onClick={toggleTheme} color="inherit">
