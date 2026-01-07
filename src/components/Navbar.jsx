@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import "./Navbar.css";
-import logo from "../components/logo.jpg";
+import logo from "../components/logo.png";
 // import ToggleColorMode from "./ToggleColorMode"; // Unused
 
 const Navbar = ({ onAboutClick }) => {

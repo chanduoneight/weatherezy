@@ -4,12 +4,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Box, IconButton, useTheme, ThemeProvider, createTheme } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import "./Navbar.css";
-import logo from "../components/logo.jpg";
+import logo from "../components/logo.png";
 
 const Navbar = ({ toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
-  
+
   // Toggle the mobile menu visibility
   const toggleMenu = () => {
     setIsOpen(!isOpen);
