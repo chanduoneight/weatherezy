@@ -1,45 +1,98 @@
-Weather Application 🌦️
-A modern weather application that lets users check the current weather and a 5-day forecast for any city or state using map-based search.
+🌦️ Weatherezy – Modern Weather Application
+Weatherezy is a modern and responsive weather application that allows users to check real-time weather conditions and forecasts for any city, state, or location using an interactive map-based search.
 
-Features
-Real-time weather updates
+🔗 Live Demo: https://weatherezyo.netlify.app/
+📁 Source Code: https://lnkd.in/gCNPm6iE
+
+🚀 Features
+✅ Real-time weather updates using OpenWeather API
+
+✅ Current weather conditions (temperature, humidity, wind speed, etc.)
+
+✅ 5-day weather forecast for future planning
+
+✅ 3-hour interval forecast for detailed insights
+
+✅ Map-based location search to explore weather interactively
+
+✅ Search by city, state, or map selection
+
+✅ Responsive and user-friendly UI for all devices
+
+🛠️ Tech Stack
+Frontend: React.js, JavaScript, HTML, CSS
+
+APIs: OpenWeatherMap API
+
+Maps: Leaflet.js / Google Maps API
+
+📸 Screenshots (Optional)
+Add screenshots or GIFs here to showcase the UI and features.
+
+📦 Installation
+Follow these steps to run the project locally:
+
+Clone the repository
+
+bash
+
+git clone https://github.com/chanduoneight/weatherezy.git
+Navigate to the project folder
+
+bash
+
+cd weather-app
+Open the application
+
+Open index.html directly in your browser
+OR
+
+Run a local server (recommended)
+
+🔑 API Key Setup
+Get your free API key from OpenWeatherMap
+👉 https://openweathermap.org/api
+
+Add the API key to:
+
+config.js
+or
+
+The appropriate configuration file in the project
+
+js
+
+const API_KEY = "YOUR_API_KEY_HERE";
+
+
+📖 Usage
+Use the search bar to enter a city or state
+
+Or click on the map to select a location
+
+View:
+
+Current weather conditions
 
 5-day weather forecast
 
-Search weather by city, state, or by selecting a location on the map
+Temperature, humidity, wind speed, and weather status
 
-Displays temperature, humidity, wind speed, and general weather conditions
+🤝 Contributing
+Contributions are welcome! 🎉
 
-Responsive and user-friendly interface
+Fork the repository
 
-Technologies Used
-HTML, CSS, JavaScript
+Create a new branch
 
-OpenWeatherMap API for weather data
+Make your changes
 
-Leaflet.js or Google Maps API for map-based search
+Submit a pull request
 
-Installation
-Clone the repository:
-git clone https://github.com/chanduoneight/weatherezy.git
+📜 License
+This project is licensed under the MIT License.
 
-Navigate to the project folder:
-cd weather-app
-
-Open index.html in your browser or run a local server
-
-Usage
-Use the search bar to type a city or state, or click on the map to select a location
-
-View the current weather and 5-day forecast for the selected area
-
-Explore weather details like temperature, humidity, wind speed, and conditions
-
-API Key
-Get an API key from OpenWeatherMap
-
-Add your API key in config.js or the appropriate file in the project
-
-Contributing
-Contributions are welcome! Fork the repository and create a pull request with your improvements.
+👨‍💻 Author
+Chandu
+GitHub: https://github.com/chanduoneight
 
