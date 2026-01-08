@@ -5,6 +5,8 @@ Weatherezy is a modern and responsive weather application that allows users to c
 📁 Source Code: https://github.com/chanduoneight/weatherezy
 
 🚀 Features
+
+
 ✅ Real-time weather updates using OpenWeather API
 
 ✅ Current weather conditions (temperature, humidity, wind speed, etc.)
