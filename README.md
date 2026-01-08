@@ -2,7 +2,7 @@
 Weatherezy is a modern and responsive weather application that allows users to check real-time weather conditions and forecasts for any city, state, or location using an interactive map-based search.
 
 🔗 Live Demo: https://weatherezyo.netlify.app/
-📁 Source Code: https://lnkd.in/gCNPm6iE
+📁 Source Code: https://github.com/chanduoneight/weatherezy
 
 🚀 Features
 ✅ Real-time weather updates using OpenWeather API
