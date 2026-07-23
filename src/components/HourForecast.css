@@ -1,0 +1,163 @@
+.hour-forecast {
+  background: var(--bg-secondary);
+  /* Primary color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 100%;
+  /* Fit to screen width */
+  max-width: 1200px;
+  overflow: hidden;
+  /* Hide overflow */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.forecast-heading {
+  text-align: center;
+  font-size: 2em;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  /* Align items in a single row */
+  gap: 10px;
+  overflow-x: auto;
+  /* Add horizontal scrolling */
+  scrollbar-width: none;
+  /* Hide scrollbar in Firefox */
+}
+
+.forecast-grid::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+
+.forecast-item {
+  background: var(--card-bg);
+  /* Accent with transparency */
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 150px;
+  flex: 1;
+  /* Allow flex items to grow and fill available space */
+  transition: transform 0.3s, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.forecast-item:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.day,
+.time,
+.temp,
+.condition {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .forecast-item {
+    min-width: 120px;
+  }
+
+  .forecast-heading {
+    font-size: 1.5em;
+  }
+
+  .day,
+  .time,
+  .temp,
+  .condition {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-item {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .forecast-heading {
+    font-size: 1.2em;
+  }
+
+  .day,
+  .time,
+  .temp,
+  .condition {
+    font-size: 0.8em;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
+/* Icon Animations */
+
+/* Rotate sun icon slowly */
+.sun {
+  animation: rotate-sun 8s linear infinite;
+}
+
+@keyframes rotate-sun {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Blink cloud icon slowly */
+.cloud {
+  animation: blink-cloud 3s ease-in-out infinite;
+}
+
+@keyframes blink-cloud {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Bounce rain icon up and down */
+.rain,
+.light-rain {
+  animation: bounce-rain 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce-rain {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}

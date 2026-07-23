@@ -1,0 +1,137 @@
+/* MapComponent.css */
+
+.map-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.heading-group {
+  flex: 1;
+}
+
+.heading {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subheading {
+  margin: 5px 0 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.map-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* Map Search Form */
+.map-search-form {
+  max-width: 250px;
+}
+
+.map-search-input-wrapper {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-search-input {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  color: var(--text-main);
+  outline: none;
+  font-size: 0.85rem;
+  width: 140px;
+}
+
+.map-search-btn {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Map Display */
+.map-outer-wrapper {
+  position: relative;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* Custom Marker Styling */
+.custom-icon {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .map-search-form,
+  .map-search-input {
+    width: 100%;
+  }
+
+  .map-outer-wrapper {
+    height: 500px;
+  }
+}

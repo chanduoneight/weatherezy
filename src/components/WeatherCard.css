@@ -1,0 +1,229 @@
+/* WeatherCard.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.weatherContainer {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: var(--text-main);
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Ensure content stays on top of the video */
+.weatherContainer {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: var(--text-main);
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainInfo h2 {
+  color: var(--text-main);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.temperatureSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  margin-right: 30px;
+}
+
+.temperatureValue {
+  font-size: 3rem;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.weatherIcon {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sunInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.sunrise_data {
+  color: rgb(255, 153, 0);
+}
+
+.weatherDetailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.detailItem {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  color: var(--text-main);
+  font-weight: 400;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.detailItem svg {
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .weatherContainer {
+    padding: 15px;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .temperatureValue {
+    font-size: 2.5rem;
+  }
+
+  .sunInfo {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  .weatherDetailsGrid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    background-color: rgba(255, 215, 0, 0.3);
+  }
+
+  50% {
+    transform: scale(1.1);
+    background-color: rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Icon animations for other details */
+.temperatureSection svg {
+  animation: rotateThermometer 5s linear infinite;
+}
+
+@keyframes rotateThermometer {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for other weather condition icons */
+.weatherIcon .icon-bounce {
+  animation: bounceIcon 1.5s ease-in-out infinite;
+}
+
+@keyframes bounceIcon {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fading effect for cloud icons */
+.weatherIcon .icon-fade {
+  animation: fadeCloud 2s ease-in-out infinite;
+}
+
+@keyframes fadeCloud {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .weatherContainer {
+    padding: 15px;
+  }
+
+  .temperatureValue {
+    font-size: 2.5rem;
+  }
+
+  .sunInfo {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  .weatherDetailsGrid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+  }
+}
