@@ -6,7 +6,6 @@ Weatherezy is a modern and responsive weather application that allows users to c
 
 🚀 Features
 
-
 ✅ Real-time weather updates using OpenWeather API
 
 ✅ Current weather conditions (temperature, humidity, wind speed, etc.)
