@@ -1,206 +1,161 @@
 # 🌦️ Weatherezy
 
-A modern, responsive weather application that provides real-time weather information and forecasts for any location using an interactive map interface. Built with **React.js** and powered by the **OpenWeather API**, Weatherezy delivers accurate weather insights with a clean and intuitive user experience.
+A modern, responsive weather web app with interactive map search and consolidated current + forecast information for any location. Built with React, Leaflet for maps, and OpenWeather for weather data — focused on simplicity, performance, and a polished UI.
 
-## 🔗 Live Demo
-
-🌐 **Website:** https://weatherezyo.netlify.app/
-
-## 📂 Repository
-
-💻 **GitHub:** https://github.com/chanduoneight/weatherezy
+Live demo: https://weatherezyo.netlify.app/
 
 ---
 
-## ✨ Features
+## Features
 
-* 🌍 Search weather by **city, state, or country**
-* 🗺️ Interactive **map-based location search**
-* 🌡️ Real-time weather conditions
-* 💧 Temperature, humidity, pressure, and wind speed
-* ☁️ Detailed weather description with icons
-* 📅 5-day weather forecast
-* ⏰ 3-hour interval forecast
-* 📱 Fully responsive design for desktop, tablet, and mobile devices
-* ⚡ Fast and intuitive user experience
+- Search weather by city, state, or country
+- Interactive map-based location selection (Leaflet)
+- Current weather: temperature, humidity, pressure, wind speed, description & icon
+- 5-day forecast (3-hour intervals)
+- Responsive UI for desktop, tablet, and mobile
+- Light / dark theme toggle
+- Smooth animations & loading states
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-### Frontend
+- Language(s): JavaScript, CSS, HTML
+- Framework / build: React (Vite)
+- Notable libraries:
+  - React 18
+  - Leaflet (map interactions)
+  - Axios (HTTP requests)
+  - MUI (UI components / theming)
+  - react-router-dom
 
-* React.js
-* JavaScript (ES6+)
-* HTML5
-* CSS3
-
-### APIs
-
-* OpenWeather API
-
-### Maps
-
-* Leaflet.js
-* Google Maps API
+APIs:
+- OpenWeather API (weather and forecast)
+- Google Maps API (if map/search enhancements are used)
 
 ---
 
-## 📸 Screenshots
+## Quickstart (development)
 
-> Add screenshots or GIFs showcasing the application's interface here.
+1. Clone the repo:
+   git clone https://github.com/chanduoneight/weatherezy.git
 
-Example:
+2. Enter the project directory:
+   cd weatherezy
 
-```
+3. Install dependencies:
+   npm install
+
+4. Create a .env in the project root with your OpenWeather API key:
+   REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
+
+5. Start the dev server:
+   npm run dev
+
+Open http://localhost:5173 (Vite default) — if your environment uses a different port, follow Vite output.
+
+---
+
+## Build & Deploy
+
+- Create a production build:
+  npm run build
+
+- Preview production build locally:
+  npm run preview
+
+- GitHub Pages deploy (configured in package.json):
+  npm run deploy
+
+- Netlify: A netlify.toml exists in the repo; connect the repo to Netlify or use Netlify CLI to deploy.
+
+Notes:
+- The repository's package.json uses Vite, so local dev command is `npm run dev` (not `npm start`).
+- The repo also includes a `homepage` and `gh-pages` deploy script.
+
+---
+
+## Environment variables
+
+Create a `.env` (do not commit it) and add:
+
+REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
+
+(If you integrate additional map APIs, add the relevant keys and keep them secret.)
+
+---
+
+## Project structure
+
+weatherezy/
+├── public/               Static files (favicon, vite.svg)
+├── src/
+│   ├── components/       React components (Navbar, MapComponent, WeatherCard, Forecast, etc.)
+│   ├── assets/           Images & other media used by the UI
+│   ├── App.jsx           Main application UI and routing
+│   ├── main.jsx          React entry point
+│   ├── index.css         Global styles
+│   └── App.css           App-specific styles
+├── package.json
+├── vite.config.js
+├── netlify.toml
+└── README.md
+
+How it fits together:
+- main.jsx mounts the React app and renders App.jsx.
+- App.jsx composes the UI: Navbar, Search, MapComponent, WeatherCard, Forecast components.
+- MapComponent uses Leaflet to let users pick a location and triggers weather requests.
+- Weather data is fetched (Axios) from OpenWeather and passed into WeatherCard, HourForecast, and FiveDayForecast components.
+
+---
+
+## Screenshots
+
+Add screenshots to the `screenshots/` folder or in the repo and link them here:
+
 screenshots/
 ├── home.png
 ├── forecast.png
 └── map-search.png
-```
 
 ---
 
-## 🚀 Getting Started
+## Contributing
 
-### Prerequisites
+Contributions are welcome — thanks!
 
-Before running the project, ensure you have:
+1. Fork the repo
+2. Create a feature branch:
+   git checkout -b feature/your-feature
+3. Make changes and commit:
+   git commit -m "Add feature: description"
+4. Push and open a Pull Request:
+   git push origin feature/your-feature
 
-* Node.js
-* npm or yarn
-* An OpenWeather API Key
-
----
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/chanduoneight/weatherezy.git
-```
-
-Navigate to the project directory:
-
-```bash
-cd weatherezy
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm start
-```
-
-The application will be available at:
-
-```
-http://localhost:3000
-```
+Please follow the existing code style and add component-level tests or screenshots for UI changes where possible.
 
 ---
 
-## 🔑 API Configuration
+## Troubleshooting
 
-Create an API key from:
-
-https://openweathermap.org/api
-
-Create a `.env` file in the project root and add:
-
-```env
-REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
-```
-
-> Never commit your API key to GitHub.
+- If the map tiles don't load, check the console for Leaflet errors and verify any required map API keys.
+- For CORS or API errors from OpenWeather, make sure your key is valid and usage limits haven't been exceeded.
+- If you see a blank page in production, confirm the build outputs are deployed and the `homepage`/base path is correct for GitHub Pages or Netlify.
 
 ---
 
-## 📖 Usage
+## License
 
-1. Enter a city or state in the search box.
-2. Or select a location directly from the interactive map.
-3. View:
-
-   * Current weather
-   * Temperature
-   * Humidity
-   * Wind speed
-   * Pressure
-   * Weather description
-   * 5-day forecast
-   * 3-hour forecast
+This project is licensed under the MIT License.
 
 ---
 
-## 📁 Project Structure
+## Author
 
-```
-weatherezy/
-│
-├── public/
-├── src/
-│   ├── components/
-│   ├── assets/
-│   ├── pages/
-│   ├── services/
-│   ├── App.js
-│   └── index.js
-│
-├── package.json
-└── README.md
-```
+VAKA CHANDU  
+Email: vakachandu99@gmail.com  
+GitHub: https://github.com/chanduoneight
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new feature branch
-
-```bash
-git checkout -b feature/your-feature
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push the branch
-
-```bash
-git push origin feature/your-feature
-```
-
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## 👨‍💻 Author
-
-**VAKA CHANDU**
-
-📧 Email: **[vakachandu99@gmail.com](mailto:vakachandu99@gmail.com)**
-
-🐙 GitHub: https://github.com/chanduoneight
-
----
-
-⭐ If you found this project useful, consider giving it a **Star** on GitHub to support the project.
+If you found this project useful, please leave a star on GitHub ⭐
