@@ -89,7 +89,7 @@ function WeatherComponent({ weather, city = "Unknown City", country = "Unknown C
     <div className="weatherContainer animate__animated animate__fadeIn" style={backgroundStyle}>
       <div className="mainInfo">
         <h2 className="animate__animated animate__zoomIn">
-          Weather in {city}, {country}
+          Weather in your{city}, {country}
         </h2>
         <div className="temperatureSection animate__animated animate__fadeInUp">
           <WiThermometer size={100} />
