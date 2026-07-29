@@ -87,6 +87,7 @@ REACT_APP_OPENWEATHER_API_KEY=YOUR_API_KEY
 
 ## Project structure
 
+```text
 weatherezy/
 ├── public/               Static files (favicon, vite.svg)
 ├── src/
@@ -100,6 +101,7 @@ weatherezy/
 ├── vite.config.js
 ├── netlify.toml
 └── README.md
+```
 
 How it fits together:
 - main.jsx mounts the React app and renders App.jsx.
